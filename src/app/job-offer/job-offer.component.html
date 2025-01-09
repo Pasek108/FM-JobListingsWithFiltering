@@ -1,0 +1,44 @@
+<div class="row left">
+  <div class="logo">
+    <img src="{{ data.logo }}" alt="{{ data.company }}" />
+  </div>
+
+  <div class="column informations">
+    <div class="row name">
+      <div class="company">{{ data.company }}</div>
+
+      @if (data.new) {
+      <div class="new">NEW!</div>
+      }
+
+      @if (data.featured) {
+      <div class="featured">FEATURED</div>
+      }
+    </div>
+
+    <div class="row position">{{ data.position }}</div>
+
+    <div class="row bottom">
+      <div class="posted-at">{{ data.postedAt }}</div>
+      <div>•</div>
+      <div class="contract">{{ data.contract }}</div>
+      <div>•</div>
+      <div class="location">{{ data.location }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="column badges">
+  <div class="row">
+    <div class="badge" (click)="addToFilters(data.role)">{{ data.role }}</div>
+    <div class="badge" (click)="addToFilters(data.level)">{{ data.level }}</div>
+
+    @for (language of data.languages; track $index) {
+    <div class="badge"  (click)="addToFilters(language)">{{ language }}</div>
+    }
+
+    @for (tool of data.tools; track $index) {
+    <div class="badge"  (click)="addToFilters(tool)">{{ tool }}</div>
+    }
+  </div>
+</div>
