@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { JobData } from '../job-data';
 
 @Component({
   selector: 'app-job-offer',
@@ -8,21 +9,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 })
 export class JobOfferComponent {
   @Output() addFilter = new EventEmitter<string>;
-  @Input() data!: {
-    id: number;
-    company: string;
-    logo: string;
-    new: boolean;
-    featured: boolean;
-    position: string;
-    role: string;
-    level: string;
-    postedAt: string;
-    contract: string;
-    location: string;
-    languages: string[];
-    tools: string[];
-  };
+  @Input() data!: JobData;
 
   addToFilters(value: string) {
     this.addFilter.emit(value);

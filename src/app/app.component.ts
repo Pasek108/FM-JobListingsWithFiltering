@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
-import data from './data.json';
+import data from './job-data.json';
 import { JobOfferComponent } from './job-offer/job-offer.component';
+import { JobData } from './job-data';
 
 @Component({
   selector: 'app-root',
@@ -10,48 +11,18 @@ import { JobOfferComponent } from './job-offer/job-offer.component';
 })
 export class AppComponent {
   title = 'JobListingsWithFiltering';
-  filters = ['Frontend', 'CSS', 'JavaScript'];
-  jobData: {
-    id: number;
-    company: string;
-    logo: string;
-    new: boolean;
-    featured: boolean;
-    position: string;
-    role: string;
-    level: string;
-    postedAt: string;
-    contract: string;
-    location: string;
-    languages: string[];
-    tools: string[];
-  }[] = data;
+  filters: string[] = [];
+  jobData: JobData[] = data;
 
   getFilteredJobs() {
-    let filteredJobs: {
-      id: number;
-      company: string;
-      logo: string;
-      new: boolean;
-      featured: boolean;
-      position: string;
-      role: string;
-      level: string;
-      postedAt: string;
-      contract: string;
-      location: string;
-      languages: string[];
-      tools: string[];
-    }[] = [];
+    let filteredJobs: JobData[] = [];
 
     this.jobData.forEach((job) => {
-      let jobBadges = [job.role, job.level]
-        .concat(job.languages)
-        .concat(job.tools);
+      let jobBadges = [job.role, job.level];
+      jobBadges = jobBadges.concat(job.languages)
+      jobBadges = jobBadges.concat(job.tools);
 
-      const filters_not_found = this.filters.filter(
-        (filter) => !jobBadges.includes(filter)
-      );
+      const filters_not_found = this.filters.filter((filter) => !jobBadges.includes(filter));
       if (filters_not_found.length == 0) filteredJobs.push(job);
     });
 
