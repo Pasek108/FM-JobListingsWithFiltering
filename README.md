@@ -89,9 +89,8 @@ Programs:
   - Open generated address in the browser
 
 - Deployment for GitHub:
-  - Add `base: '/repo-name/'` in `vite.config.ts`
-  - Run `npm run build`
-  - Rename `/dist` folder to `/docs`
+  - Run `ng build --output-path docs --base-href /FM-JobListingsWithFiltering/`
+  - Move conetent from `/docs/browser` to `/docs`
 
 ## Copyright :copyright:
 I do not own the rights to the content of the challenges. All challenge data was downloaded and included only to provide context for the solutions.
@@ -102,31 +101,19 @@ I do not own the rights to the content of the challenges. All challenge data was
 # Details :scroll:
 
 ## User interface
-### Step 1
-![step 1](/_for_readme/UI/step-1.png)
-The first step requires the user to input their name, email, and phone number. The provided values are properly validated before proceeding to the next step. 
+### Jobs listing
+![jobs listing](/_for_readme/UI/jobs-listing.png)
+The main view of the application displays job offers.
 
-### Step 2
-![step 2](/_for_readme/UI/step-2.png)
-In the second step, the user can select a plan and change the billing period.
-
-### Step 3
-![step 3](/_for_readme/UI/step-3.png)
-The third step allows the user to pick additional options, with pricing dependent on the previously selected billing period.
-
-### Step 4
-![step 4](/_for_readme/UI/step-4.png)
-The fourth step is a summary of the user’s choices. It displays the selected options and the total price. The user can still go back and make changes.
-
-### Step 5
-![step 5](/_for_readme/UI/step-5.png)
-A simple thank-you message.
-
+![jobs filtering](/_for_readme/UI/jobs-filtering.png)
+Users can filter offers by clicking on a skill.  
 
 ## Performance
+> [!WARNING]  
+> The accessibility score is lower because of the design's color contrast
+
 ### Desktop
 ![desktop performance](/_for_readme/desktop-performance.png)
-Accessibility score is lower due to colors contrast of the design.
 
 ### Mobile
 ![mobile performance](/_for_readme/mobile-performance.png)
