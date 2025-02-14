@@ -80,7 +80,7 @@ Programs:
 - ✅ Filter job listings based on the categories
 
 ## Setup
-- Use [live version](https://pasek108.github.io/FM-MultiStepForm/).
+- Use [live version](https://pasek108.github.io/FM-JobListingsWithFiltering/).
 
 - Download this repository and:
   - Open project in VSCode
