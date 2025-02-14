@@ -70,8 +70,8 @@ header source {
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  width: 2rem;
   height: 2rem;
-  aspect-ratio: 1;
   background-color: hsl(180, 29%, 50%);
 }
 

@@ -1,9 +1,10 @@
 import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { JobData } from '../job-data';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-job-offer',
-  imports: [],
+  imports: [NgOptimizedImage],
   templateUrl: './job-offer.component.html',
   styleUrl: './job-offer.component.css',
 })

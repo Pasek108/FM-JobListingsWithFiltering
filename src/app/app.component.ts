@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import data from './job-data.json';
 import { JobOfferComponent } from './job-offer/job-offer.component';
 import { JobData } from './job-data';
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-root',
-  imports: [JobOfferComponent],
+  imports: [JobOfferComponent, NgOptimizedImage],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
@@ -13,6 +14,12 @@ export class AppComponent {
   title = 'JobListingsWithFiltering';
   filters: string[] = [];
   jobData: JobData[] = data;
+  screenWith: number = 0;
+
+  constructor() {
+    this.screenWith = window.innerWidth;
+    window.addEventListener('resize',() => (this.screenWith = window.innerWidth));
+  }
 
   getFilteredJobs() {
     let filteredJobs: JobData[] = [];

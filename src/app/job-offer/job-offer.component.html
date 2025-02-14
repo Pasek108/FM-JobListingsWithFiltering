@@ -1,6 +1,6 @@
 <div class="row left">
   <div class="logo">
-    <img src="{{ data.logo }}" alt="{{ data.company }}" />
+    <img ngSrc="{{ data.logo }}" alt="{{ data.company }}" width="88" height="88" [attr.priority]="data.id==1" />
   </div>
 
   <div class="column informations">

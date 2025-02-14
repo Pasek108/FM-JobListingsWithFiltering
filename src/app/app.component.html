@@ -1,8 +1,9 @@
 <header>
-  <picture>
-    <source media="(max-width: 750px)" srcset="images/bg-header-mobile.svg" />
-    <img src="images/bg-header-desktop.svg" alt="" />
-  </picture>
+  @if (screenWith > 750) {
+    <img ngSrc="images/bg-header-desktop.svg" alt="header background" width="1440" height="156" priority />
+  } @else {
+    <img ngSrc="images/bg-header-mobile.svg" alt="header background" width="375" height="156" priority />
+  }
 </header>
 
 <div class="job-offers">
@@ -13,7 +14,7 @@
       <div class="filter">
         <div class="name">{{ filter }}</div>
         <div class="delete" (click)="removeFilter(filter)">
-          <img src="images/icon-remove.svg" alt="" />
+          <img ngSrc="images/icon-remove.svg" alt="remove icon" width="14" height="14" />
         </div>
       </div>
       }
