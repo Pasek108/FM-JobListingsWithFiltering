@@ -105,12 +105,14 @@ I do not own the rights to the content of the challenges. All challenge data was
 ![jobs listing](/_for_readme/UI/jobs-listing.png)
 The main view of the application displays job offers.
 
+<br>
+
 ![jobs filtering](/_for_readme/UI/jobs-filtering.png)
 Users can filter offers by clicking on a skill.  
 
 ## Performance
 > [!WARNING]  
-> The accessibility score is lower because of the design's color contrast
+> The accessibility score is lower because of the design's color contrast.
 
 ### Desktop
 ![desktop performance](/_for_readme/desktop-performance.png)
