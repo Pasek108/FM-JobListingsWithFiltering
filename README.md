@@ -48,7 +48,7 @@ Frontend Mentor is a great resource for developers looking to gain hands-on expe
 # Overview :sparkles:
 
 ## About
-My solution to the [Frontend Mentor "Job listings with filtering" challenge](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). The project was created using Angular 19 and TypeScript. It was my first project using Angular. The challenge gave me an opportunity to practice Angular basics, especially state management and communication between components.
+My solution to the [Frontend Mentor "Job listings with filtering" challenge](https://www.frontendmentor.io/challenges/job-listings-with-filtering-ivstIPCt). The project was created using Angular 19 and TypeScript. The challenge gave me an opportunity to practice Angular basics, especially state management and communication between components.
 
 Check out the [live version](https://pasek108.github.io/FM-JobListingsWithFiltering/) of this project, as well as my [Frontend Mentor profile](https://www.frontendmentor.io/profile/Pasek108).
 
