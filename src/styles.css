@@ -9,6 +9,8 @@ html {
 }
 
 body {
+  position: relative;
+  min-height: 100lvh;
   margin: 0;
   padding: 0;
   background-color: hsl(180, 52%, 96%);
